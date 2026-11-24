@@ -10,6 +10,7 @@ Reference tracks the agent compares against (rule 4), and a structure map for ea
 | Track | Genre | BPM | Key | Map | Analysis JSON |
 |---|---|---|---|---|---|
 | David Guetta & Jast - Mariô (Extended Mix) | tech house / Latin house | 126 | A minor (8A) | `mario.md` | mario-ref.json (+ intro, break1, drop1, drop2) |
+| Andrea Oliva - Spotlight (radio edit) | progressive house / tech house | 123 | D# minor (2A) | `spotlight.md` | andreaoliva-spotlight-ref.json, -genre.json, -genre-drop2.json |
 
 ## Structure map template
 ```
