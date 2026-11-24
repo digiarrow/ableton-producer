@@ -4,6 +4,8 @@ Every free plugin, sample pack or preset the agent downloads or installs. Rules 
 Format: date · machine · name and version · source URL · licence · where installed · why · verified (loads in Live: yes/no)
 
 ## 2026-11-24
+- 2026-11-24 · Mac · venv ~/producer-agent/.venv-tools (CPython 3.11.18 via uv): basic-pitch 0.4.0 (Apache-2.0, model inside the wheel), matchering 2.0.6 (GPLv3), pyloudnorm 0.2.0 (MIT), soundfile, coremltools 9.0 · PyPI · analysis tools (`skills/midi.md`, `skills/loudness.md`) · tested
+- by 2026-11-19 · Mac · demucs 4.1.0 (MIT) + torch in ~/producer-agent/demucs-venv, model htdemucs 84 MB from Hugging Face (adefossez/HTDemucs) · stem splitting (`skills/stems.md`) · tested 2026-11-24
 - 2026-11-24 · Mac · CPython 3.12.16 (uv-managed) · python.org builds via `uv python install` · PSF · ~/.local/share/uv · venv ~/producer-agent/.venv-genre for genre recognition · n/a (not a plugin)
 - 2026-11-24 · Mac · essentia-tensorflow 2.1b6.dev1389 (+ numpy, pyyaml, six) · PyPI · AGPL-3.0 · ~/producer-agent/.venv-genre · genre recognition (`skills/genre.md`) · n/a (not a plugin)
 - 2026-11-24 · Mac · Discogs-EffNet models: discogs-effnet-bs64-1.pb (18.4 MB), genre_discogs400-discogs-effnet-1.pb + .json · essentia.upf.edu/models · CC BY-NC-SA 4.0 (non-commercial only) · ~/producer-agent/models · genre recognition · tested on the Mariô reference

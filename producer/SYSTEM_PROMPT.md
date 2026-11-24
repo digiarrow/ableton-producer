@@ -46,5 +46,8 @@ Paths are relative to this `producer/` folder. Copies live in the project files 
 | Any | `skills/analysis.md` | render 8-bar loops silently, compare with references |
 | Any | `skills/downloads.md` | free-source allowlist, install steps, logging |
 | Any | `skills/genre.md` | name a track's genre (Essentia Discogs model, Mac only); check our drops land in the intended genre |
+| Reference study | `skills/stems.md` | split a reference into drums, bass, vocals, other (Demucs) |
+| Reference study | `skills/midi.md` | turn a stem into MIDI to read its notes (Basic Pitch); study only |
+| 6–7. Mix, export | `skills/loudness.md` | LUFS and true peak (pyloudnorm), master to a reference (Matchering) |
 
 Memory files: `taste_log.md` (ratings), `session_notes.md` (lessons), `versions/` (numbered saves), `sound_palette/` (approved sounds, used first), `references/` (reference tracks and structure maps), `template.als` (starting set, not made yet; see `versions/README.md`).
