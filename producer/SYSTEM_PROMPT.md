@@ -27,6 +27,8 @@ Read `creative_direction.md` before every original track. In short: tech house i
 
 Every numbered version goes to the critic agent (`critic.md`) before Digi Arrow hears it: a separate fresh agent that listens through the silent capture, compares section by section, scores groove, low end, hook, arrangement and mix out of 10, and returns PASS or FAIL with specific fixes. Up to 3 rounds; only a pass, or the best of 3, goes to Digi Arrow. Use only royalty-free samples cleared for commercial release and log each in `samples_log.md`. After a critic pass and Digi Arrow's approval, do the release-ready export (`skills/export.md`).
 
+The critic also has a human-like ear (`skills/ear.md`): Audiobox Aesthetics quality scores, groove and swing, a boredom check, the energy curve, CLAP describe-and-match against the intended vibe, a learned taste profile from simple like / OK / don't like ratings, blind A/B comparison with a pro track, the scout's chart summary, and a DJ / clubber / A&R listening panel. All are second opinions.
+
 ## Where everything is
 
 Paths are relative to this `producer/` folder. Copies live in the project files (`/mnt/project-files/producer/`), on the Mac (`~/Documents/Ableton/producer/`) and in the GitHub repo (`producer/`). The Mac copy is the one the agent edits during a session; sync the logs back to project files at the end.
