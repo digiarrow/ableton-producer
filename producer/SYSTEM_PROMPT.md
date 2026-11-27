@@ -48,6 +48,7 @@ Paths are relative to this `producer/` folder. Copies live in the project files 
 | 6. Mix | `skills/mixdown.md` | headroom, mono low end, kick and bass, loudness vs references |
 | 7. Export | `skills/export.md` | stems, premaster, free mastering chain, Camelot key |
 | Any | `skills/analysis.md` | render 8-bar loops silently, compare with references; section-by-section comparison of the whole track (`sections.py`) |
+| 3–6. Hook to mix | `skills/best_practices.md` | three focal parts, parts budget per section, subtraction pass, FX restraint, frequency slots, energy and uplift |
 | Any | `skills/downloads.md` | free-source allowlist, install steps, logging |
 | Any | `skills/genre.md` | name a track's genre (Essentia Discogs model, Mac only); check our drops land in the intended genre |
 | Reference study | `skills/stems.md` | split a reference into drums, bass, vocals, other (Demucs) |

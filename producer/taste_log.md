@@ -4,6 +4,8 @@ Digi Arrow's rating (1 to 10) and note for every numbered version. Read it befor
 Format: date · song · version · rating · what they said · what it teaches
 
 ## Rules learned (read these first)
+- **Too many parts at once and a whole-mix effect ruin a track that is otherwise "not bad".** Keep three focal parts, stay within the parts budget per section, add one thing per 8-bar phrase, and use one transition FX at a time, never across the whole mix in a drop (`skills/best_practices.md`). (original-01 v03, 2026-11-27)
+- **Energy comes from groove and contrast, not layers.** v02 "meh, lacks energy, not uplifting": strip the break, cut the lows in the build, bring a rising, bright hook on the drop. (original-01 v02, 2026-11-27)
 - **Comparing whole-mix spectra is not enough to choose drums.** Isolate the reference's drums (stem separation) and match each hit's tone, length and placement before rating. (Mariô, 2026-11-19)
 - **Sound selection and the hook matter more than matching numbers.** Matching the reference's band levels, tempo and form produced a track that was "awful, not even close". The analysis numbers are a check, not the goal. (Mariô, 2026-11-12)
 - **Stock Lite sounds (Drift, Simpler presets) are not good enough on their own for a reference-style track.** Start from the sound palette, Vital presets or quality free samples, and audition sounds against the reference layer by layer before writing parts. (Mariô, 2026-11-12)
