@@ -9,6 +9,7 @@ Load this with each stage skill. It is short on purpose.
 - Surge XT, TAL-NoiseMaker and Vital expose no parameters to AbletonMCP. Load them by preset; Vital presets are converted to a Live-loadable format on the Mac (`~/Documents/Ableton/songs/mario-instrumental/tools2/mkvital.py`). Design a Vital sound by editing a preset file.
 - AbletonMCP can't set routing, sidechain, return sends, or save the set. Ask Digi Arrow, or use the template (`../versions/README.md`).
 - Check `../sound_palette/` first, then installed presets, then free downloads (`downloads.md`).
+- **Fewer, better parts** (`best_practices.md`): three focal parts at a time, parts budget per section, one change per 8-bar phrase, one transition FX per transition, no whole-mix effects in drops.
 - **Sound first, numbers second** (`../taste_log.md`). Audition 2 to 4 candidate sounds against the matching reference layer before writing the part.
 - End of every stage: render an 8-bar loop silently, compare (`analysis.md`), fix, save `v<NN>`, ask for a 1 to 10 rating, tick the checklist.
 - Log every decision in `songs/<song>/sheet.md` (date · stage · decision · why).
