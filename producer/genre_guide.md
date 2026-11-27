@@ -14,6 +14,8 @@
 | Big room / EDM | 126 to 130 | 8 to 16-bar phrases; build and drop; shorter intros |
 | Hip hop / pop | varies | Verse, chorus, bridge; 4 to 8-bar sections; no long DJ intro |
 
+Main lane is **tech house** (`creative_direction.md`); the other rows are for when Digi Arrow asks for them or a reference needs them.
+
 Pick the tempo inside the range that suits the track, or go outside it when the references do. There is no fixed BPM.
 
 Key: pick the key from the references (analyze.py reports it) or what suits the bass: for club tracks, a bass root between F and A keeps the sub fundamental around 43 to 55 Hz, where club systems hit hardest. Note the Camelot code in the song sheet for DJ mixing.

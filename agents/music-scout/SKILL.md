@@ -29,6 +29,11 @@ Report shape (short and scannable):
 4. **Close to your references:** who sounds like Don't Blink, Carl Cox, Guetta, The Prodigy, Prydz or Carola right now.
 5. **Sources** list.
 
+### Chart summary for the producer (part of every trends report)
+Study the current top Beatport tech house tracks (Top 100 and Hype; at least 10 tracks) and summarise what they share, as a short table the producer and critic read:
+| Trait | What most of them do | Range | Examples |
+Rows: tempo, key (and Camelot), groove (swing, percussion, kick style), bass type, hook type (vocal chop, spoken, stab, lead), energy (intro length, breakdown length, number of drops), length of the extended mix. Say what you saw in sources and date it. The critic uses this as a guide only, never as a reason to fail an original idea.
+
 ## Job 2: Sample sourcing
 
 Search widely for new **free and royalty-free** sample packs suited to the genre, and choose the most relevant and reliable sources yourself (for example Splice free packs, Loopmasters/Loopcloud free, Ghosthack, Cymatics free, Samplephonics, Producer Loops, Bandcamp free packs, label or artist giveaways, MusicRadar SampleRadar, Ableton's free packs). Skip pirated, "leaked" or unclear sources.

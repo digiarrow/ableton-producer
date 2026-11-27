@@ -2,6 +2,9 @@
 
 Load with `_common.md`. The hook is what Digi Arrow judges the track by (taste log: Mariô was rejected mostly on sound and hook). Spend the most time here.
 
+## One hook
+Groove first, then **one** simple, repetitive, memorable element that gives DJs a crowd reaction point (`../creative_direction.md`). For an original tech house track that is usually a **short spoken or chopped vocal hook** or a **synth stab**. One strong hook beats a crowded arrangement: anything added later supports it and stays out of its register. In a remake or reference study, no vocals or vocal-like layers: use a stab, lead or pluck.
+
 ## Choose the type
 - **Vocal chop** (Guetta, Don't Blink): short shouts or syllables from a free, cleared vocal pack (`downloads.md`), pitched to the key, 2 to 4 hits per bar in fixed 16th slots.
 - **Stab** (tech house): short chord or single-note stab, saw or organ, 1/16 to 1/8 long.

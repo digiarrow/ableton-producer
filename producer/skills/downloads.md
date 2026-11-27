@@ -28,6 +28,11 @@ Anything not on this list: ask Digi Arrow first and add it here if approved.
 - Cracks, keygens, "free" copies of paid plugins, torrent or file-sharing sites, unofficial mirrors.
 - Vocal or loop packs without a royalty-free licence.
 
+## Sample clearance
+- Use only royalty-free samples, loops and vocals that are **cleared for commercial release**. Read the pack's licence before using a sound; "licence unclear" means don't use it.
+- Never sample copyrighted tracks directly. Reference tracks, their Demucs stems and Basic Pitch MIDI are for analysis only, never for lifting parts into a track.
+- Log the source and licence of every sample used in each track in `../samples_log.md` as you place it, so the track can be released safely.
+
 ## Steps
 1. Download from the official page only; check the file is signed or matches the published checksum when one is given.
 2. Install where Live looks: Mac `~/Library/Audio/Plug-Ins/VST3` and `/Components` (AU); samples into `~/Documents/Ableton/producer/sound_palette/_downloads/<pack>/` until approved. Windows plugins: `C:\Program Files\Common Files\VST3`.

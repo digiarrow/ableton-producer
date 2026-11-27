@@ -12,6 +12,12 @@ Reference tracks the agent compares against (rule 4), and a structure map for ea
 | David Guetta & Jast - Mariô (Extended Mix) | tech house / Latin house | 126 | A minor (8A) | `mario.md` | mario-ref.json (+ intro, break1, drop1, drop2) |
 | Andrea Oliva - Spotlight (radio edit) | progressive house / tech house | 123 | D# minor (2A) | `spotlight.md` | andreaoliva-spotlight-ref.json, -genre.json, -genre-drop2.json |
 
+## Benchmarks (for original tracks)
+3 to 5 current, well-selling tech house tracks Digi Arrow bought, in `~/producer-agent/references/benchmarks/` on the Mac. The critic uses them for original tracks only as a loose loudness and low-end range and for the originality check (`../critic.md`, `critic_checks.py benchmarks`). Refresh them from the scout's trend report every few months. None chosen yet.
+
+| Track | Label | Why it's a benchmark | Added |
+|---|---|---|---|
+
 ## Structure map template
 ```
 # <artist> - <title>
