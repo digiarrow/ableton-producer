@@ -17,7 +17,7 @@ After saving `v<NN>` and capturing it silently (`skills/analysis.md`: the whole 
 >
 > Read first: `songs/<song>/sheet.md` (brief, references, decisions), `producer/creative_direction.md`, `producer/skills/mixdown.md` (mixdown checklist), `songs/<song>/checklist.md` (element checklist), `producer/skills/best_practices.md` if it exists, `producer/taste_log.md` and `producer/critic_log.md` (where your past scores disagreed with the user, and what you adjusted).
 >
-> Listen through the agent's ear: the silent capture at `<capture path>` (never start playback yourself). Measure with the Mac tools (Python envs as in `producer/skills/*.md`):
+> Listen through the agent's ear: the silent capture at `<capture path>` (never start playback yourself). For an original track with no reference, follow "Original tracks" below instead of the reference comparison. Measure with the Mac tools (Python envs as in `producer/skills/*.md`):
 > - `sections.py <capture> <reference audio> --bpm <ours> --ref-bpm <theirs> --map producer/references/<ref>.md` for the section-by-section comparison with `<reference>`
 > - `analyze.py` for bands, tempo and key; `lufs.py` for LUFS and true peak; `genre.py` on the drop (should read tech house or close)
 > - Live read tools only, if connected: get_session_snapshot, get_track_info, get_clip_notes, get_arrangement_clips, get_device_parameters. Never a tool that changes the set or plays.
@@ -34,6 +34,15 @@ After saving `v<NN>` and capturing it silently (`skills/analysis.md`: the whole 
 > Needs the user's ears: <anything the numbers can't settle>
 > ```
 > Fixes are specific: "drop 1 (bars 33-64): bass masks the kick, sub 3 dB over the reference; deepen the sidechain or shorten the bass tail", "no clear hook by bar 64". Never "the mix could be better".
+
+## Original tracks (no reference)
+When Digi Arrow asks for a new, original track rather than a recreation, the critic still runs full quality control, without a single reference to copy. Add this to the brief in place of the `sections.py` line, and keep the same scores, fix format, 3-round loop and taste-log learning.
+
+> This is an original track: there is no reference to match. Check in this order:
+> 1. **Technical faults first, automatic FAIL:** run `critic_checks.py faults <capture>`. Every `FAIL` line fails the version (clipping, true peak over 0 dBTP, sudden volume jumps, harsh 2.5 to 5 kHz, muddy 200 to 500 Hz, phase problems, dropouts). Confirm each `CHECK` line by ear or against the locators: a confirmed click or glitch, or a silence that isn't a planned stop, also fails. Check kick and bass clashing from the set (sidechain on Bass, overlapping notes) and the low bands; a clear clash fails.
+> 2. **Genre benchmarks, not a reference:** run `critic_checks.py benchmarks <capture> ~/producer-agent/references/benchmarks/*` (3 to 5 current, well-selling tech house tracks). Use them only as a loose technical range for loudness and low-end balance. Being far outside the range is a technical note (`NOTE` lines, "should fix" at most), **never a fail**. Never fail or change a track because its sound, style, melody or arrangement differs from the benchmarks: creative choices belong to the producer and the user.
+> 3. **Checklists and creative direction:** mixdown checklist, element-by-element checklist, drums-only DJ intro and outro, groove first, one strong hook, something changes every 8 to 16 bars (check the arrangement clips and locators).
+> 4. **Originality:** the track must not sound too close to any benchmark. An `ORIGINALITY too close` line is a must-fix (change the hook or chords); a `check ... by ear` line goes under "Needs the user's ears". The score is a pointer, not proof.
 
 ## Learning from the taste log
 When Digi Arrow rates a version, compare the rating with the critic's average score (both out of 10). If they differ by 2 or more, add a line to `critic_log.md`: what the critic scored, what the user said, why they disagree, and what the critic will weigh differently next time. The critic reads `critic_log.md` every review.
