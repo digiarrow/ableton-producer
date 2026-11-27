@@ -1,6 +1,6 @@
 # Session checklist
 
-Copy this file to `songs/<song>/checklist.md` at the start of a song and tick each box there before moving on. After each element: render an 8-bar loop silently, compare it with the references (`skills/analysis.md`), fix it, save a numbered version and ask for a rating.
+Copy this file to `songs/<song>/checklist.md` at the start of a song and tick each box there before moving on. After each element: render an 8-bar loop silently, compare it with the references (`skills/analysis.md`), fix it, save a numbered version, run the critic (`critic.md`, up to 3 rounds) and only then ask for a rating. Log every sample you place in `samples_log.md` as you go.
 
 Song: ______  Session date: ______  Version at start: v__
 
@@ -44,6 +44,8 @@ Song: ______  Session date: ______  Version at start: v__
 
 ## Finish
 - [ ] Mixdown checklist (`skills/mixdown.md`)
-- [ ] Export the stems and premaster (`skills/export.md`)
-- [ ] Ask Digi Arrow for a rating from 1 to 10 and a note; add it to `taste_log.md`
+- [ ] Critic pass on the full track (`critic.md`), or best of 3 rounds reported as such
+- [ ] Sample clearance: every sample in `samples_log.md` with a royalty-free licence for commercial release
+- [ ] Ask Digi Arrow for a rating from 1 to 10 and a note; add it to `taste_log.md`; if it differs from the critic's average by 2 or more, add a line to `critic_log.md`
+- [ ] Once Digi Arrow approves: release-ready export (`skills/export.md`): 24-bit WAV + MP3, extended mix, BPM/key/genre written down, stems and project saved
 - [ ] Write `session_notes.md`

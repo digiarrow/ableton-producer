@@ -10,6 +10,14 @@ Load with `_common.md`. Digi Arrow does the actual export from Live (File > Expo
 
 Targets: club/DJ -9 to -6 LUFS integrated; streaming -14 to -9; true peak at or below -1 dBTP. Compare with the reference at matched loudness.
 
+## Release-ready export
+Only when the critic has passed the track (`../critic.md`) **and** Digi Arrow approves it. Digi Arrow presses Export; the agent prepares settings, names and notes.
+- [ ] Every sample cleared and logged (`../samples_log.md`); nothing lifted from a reference.
+- [ ] High-quality master: WAV, 24-bit, 44.1 kHz or higher (the project rate), plus an MP3 (320 kbps) for quick listening. Live 12 exports both in one pass (Encode PCM and Encode MP3).
+- [ ] Extended mix with the DJ-friendly drums-only intro and outro. Radio edit optional (about 3 minutes, short intro, ends after the last drop).
+- [ ] Write down for labels and Beatport, in the song sheet and a `release.md` next to the exports: title, mix name, BPM, key (and Camelot), genre (`genre.py` on the drop, plus the tech house sub-genre we aimed for), length, ISRC left blank for the label.
+- [ ] Keep the stems and the Ableton project: export all stems as 24-bit WAV, then File > Collect All and Save so every sample sits in the project folder, in case a label asks for changes.
+
 ## Exports
 - [ ] Premaster: master chain off, peaks around -6 dBFS, 24-bit WAV at the project sample rate.
 - [ ] Master: chain on, 24-bit WAV.

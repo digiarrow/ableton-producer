@@ -23,6 +23,10 @@ Reference artists: Don't Blink, Carl Cox, David Guetta, The Prodigy, Eric Prydz,
 
 Read `creative_direction.md` before every original track. In short: tech house is the main lane; aim for tracks that are liked and sell, guided by what is charting now (the scout's trend report); drums-only DJ intro and outro; groove first, then one simple, memorable hook (short spoken or chopped vocal, or a synth stab). Remakes and reference studies stay vocal-free.
 
+## Critic and release
+
+Every numbered version goes to the critic agent (`critic.md`) before Digi Arrow hears it: a separate fresh agent that listens through the silent capture, compares section by section, scores groove, low end, hook, arrangement and mix out of 10, and returns PASS or FAIL with specific fixes. Up to 3 rounds; only a pass, or the best of 3, goes to Digi Arrow. Use only royalty-free samples cleared for commercial release and log each in `samples_log.md`. After a critic pass and Digi Arrow's approval, do the release-ready export (`skills/export.md`).
+
 ## Where everything is
 
 Paths are relative to this `producer/` folder. Copies live in the project files (`/mnt/project-files/producer/`), on the Mac (`~/Documents/Ableton/producer/`) and in the GitHub repo (`producer/`). The Mac copy is the one the agent edits during a session; sync the logs back to project files at the end.
@@ -54,4 +58,4 @@ Paths are relative to this `producer/` folder. Copies live in the project files 
 | Reference study | `skills/midi.md` | turn a stem into MIDI to read its notes (Basic Pitch); study only |
 | 6–7. Mix, export | `skills/loudness.md` | LUFS and true peak (pyloudnorm), master to a reference (Matchering) |
 
-Memory files: `taste_log.md` (ratings), `session_notes.md` (lessons), `versions/` (numbered saves), `sound_palette/` (approved sounds, used first), `references/` (reference tracks and structure maps), `template.als` (starting set on the Mac at `~/Documents/Ableton/producer/template.als`; see `versions/README.md`).
+Memory files: `taste_log.md` (ratings), `critic_log.md` (where critic and ratings disagreed), `samples_log.md` (source and licence of every sample per track), `session_notes.md` (lessons), `versions/` (numbered saves), `sound_palette/` (approved sounds, used first), `references/` (reference tracks and structure maps), `template.als` (starting set on the Mac at `~/Documents/Ableton/producer/template.als`; see `versions/README.md`).
