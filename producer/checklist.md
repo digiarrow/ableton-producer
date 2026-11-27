@@ -5,11 +5,12 @@ Copy this file to `songs/<song>/checklist.md` at the start of a song and tick ea
 Song: ______  Session date: ______  Version at start: v__
 
 ## Setup
-- [ ] Read `taste_log.md` and `session_notes.md` (all "Rules learned" lines)
+- [ ] Read `taste_log.md` and `session_notes.md` (all "Rules learned" lines) and `creative_direction.md`
+- [ ] Read the newest trend report in `/mnt/project-files/scout/`; note 1 to 3 trend cues in the song sheet (none under 4 weeks old: say so and ask for a scout run)
 - [ ] Pick the genre and 1 to 3 reference tracks; check each is in `references/` with a structure map
 - [ ] Check `genre_guide.md` for tempo range and structure; choose tempo and key from the references
-- [ ] Open `template.als` (or a new set until it exists) and set tempo and key
-- [ ] Mark the sections with locators (intro, build, drop, break, outro)
+- [ ] Open `template.als`, Save As `<song>-v01.als` right away, then set tempo and key
+- [ ] Mark the sections with locators (intro, build, drop, break, outro), using the same names as the reference structure map
 - [ ] Check `sound_palette/` for approved sounds before browsing anything else
 
 ## Drums (`skills/drums.md`)
@@ -27,7 +28,7 @@ Song: ______  Session date: ______  Version at start: v__
 - [ ] Loop rendered, compared, version saved, rating asked
 
 ## Music
-- [ ] Hook: lead, stab, pluck or vocal chop (`skills/hook.md`)
+- [ ] One hook: short spoken or chopped vocal, or a synth stab (`skills/hook.md`); no vocals in a remake
 - [ ] Loop rendered, compared, version saved, rating asked
 - [ ] Chords or pads (`skills/atmosphere.md`)
 - [ ] Atmosphere and textures
@@ -36,8 +37,9 @@ Song: ______  Session date: ______  Version at start: v__
 ## FX and arrangement (`skills/arrangement.md`)
 - [ ] Risers, impacts, sweeps
 - [ ] Arrange the sections by the genre guide and the reference structure map
+- [ ] Drums-only DJ intro and outro (16 to 32 bars)
 - [ ] Automation so something changes every 8 or 16 bars
-- [ ] Energy curve check against the references
+- [ ] Section-by-section comparison with the reference (`sections.py`, `skills/analysis.md`); fix the biggest differences
 - [ ] Version saved, rating asked
 
 ## Finish

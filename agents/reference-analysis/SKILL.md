@@ -13,6 +13,7 @@ Gives the producer agent ears: capture the track silently, measure it, compare i
 ~/producer-agent/.venv/        Python env (librosa, soundfile, pyloudnorm, sounddevice, numpy)
 ~/producer-agent/record.py     records BlackHole into a WAV
 ~/producer-agent/analyze.py    measures a WAV, --compare against a reference
+~/producer-agent/sections.py   section-by-section comparison against a reference, differences only
 ~/producer-agent/references/   reference tracks Digi Arrow bought (WAV or high-quality MP3)
 ~/producer-agent/renders/      the agent's silent captures
 ~/producer-agent/analysis/     saved JSON results
@@ -34,7 +35,8 @@ Audio routing (set once by Digi Arrow): Live's output device is the aggregate de
 3. Start `record.py --seconds <section length> --out ~/producer-agent/renders/<song>-<section>-r<round>.wav` in the background, then start playback through AbletonMCP from the section's locator. Stop playback when recording ends. Section length in seconds = bars × 4 × 60 / BPM.
 4. `set_master_output("3/4")`. **Always do this, even if something failed.** Then confirm with Digi Arrow's routing that the Master is back on 3/4.
 5. `analyze.py <render> --compare <ref json>`. For sections, use `--start/--end` (seconds) on the reference so you compare drop with drop, not drop with whole track.
-6. Read the differences (below), change one or two things, log them, repeat from step 2. Stop after about five rounds or when everything is within tolerance, then report to Digi Arrow with what changed and the before/after numbers.
+6. **Whole track or arrangement:** capture from bar 1 and run `sections.py <capture> <ref audio> --bpm <ours> --ref-bpm <theirs> --map <reference structure map .md> [--sections "Intro:1-32,..."] --json <file>`. It splits both tracks into matching sections (map bars or Ableton locators) and prints only the differences per section (spectrum, bands, energy curve, low-end mono, width, crest, hits/s, transients, brightness).
+7. Read the differences (below), change one or two things, log them, repeat from step 2. Stop after about five rounds or when everything is within tolerance, then report to Digi Arrow with what changed and the before/after numbers.
 
 ## Reading the results
 

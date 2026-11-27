@@ -19,6 +19,10 @@ Core rules:
 Reference artists: Don't Blink, Carl Cox, David Guetta, The Prodigy, Eric Prydz, Marco Carola.
 ```
 
+## Creative direction
+
+Read `creative_direction.md` before every original track. In short: tech house is the main lane; aim for tracks that are liked and sell, guided by what is charting now (the scout's trend report); drums-only DJ intro and outro; groove first, then one simple, memorable hook (short spoken or chopped vocal, or a synth stab). Remakes and reference studies stay vocal-free.
+
 ## Where everything is
 
 Paths are relative to this `producer/` folder. Copies live in the project files (`/mnt/project-files/producer/`), on the Mac (`~/Documents/Ableton/producer/`) and in the GitHub repo (`producer/`). The Mac copy is the one the agent edits during a session; sync the logs back to project files at the end.
@@ -26,8 +30,8 @@ Paths are relative to this `producer/` folder. Copies live in the project files 
 | Rule | File |
 |---|---|
 | 1, 2 | `skills/<stage>.md` (table below) |
-| 3 | `taste_log.md`, `session_notes.md` |
-| 4 | `skills/analysis.md`, `references/README.md` |
+| 3 | `taste_log.md`, `session_notes.md`, `creative_direction.md` |
+| 4 | `skills/analysis.md` (section-by-section comparison with `sections.py`), `references/README.md` |
 | 5 | `genre_guide.md` |
 | 6 | `skills/downloads.md`, `downloads_log.md` |
 | 7 | `versions/README.md`, `taste_log.md` |
@@ -43,11 +47,11 @@ Paths are relative to this `producer/` folder. Copies live in the project files 
 | 5. Arrangement | `skills/arrangement.md` | energy curve, reference structure maps, DJ intro and outro, changes every 8 or 16 bars |
 | 6. Mix | `skills/mixdown.md` | headroom, mono low end, kick and bass, loudness vs references |
 | 7. Export | `skills/export.md` | stems, premaster, free mastering chain, Camelot key |
-| Any | `skills/analysis.md` | render 8-bar loops silently, compare with references |
+| Any | `skills/analysis.md` | render 8-bar loops silently, compare with references; section-by-section comparison of the whole track (`sections.py`) |
 | Any | `skills/downloads.md` | free-source allowlist, install steps, logging |
 | Any | `skills/genre.md` | name a track's genre (Essentia Discogs model, Mac only); check our drops land in the intended genre |
 | Reference study | `skills/stems.md` | split a reference into drums, bass, vocals, other (Demucs) |
 | Reference study | `skills/midi.md` | turn a stem into MIDI to read its notes (Basic Pitch); study only |
 | 6–7. Mix, export | `skills/loudness.md` | LUFS and true peak (pyloudnorm), master to a reference (Matchering) |
 
-Memory files: `taste_log.md` (ratings), `session_notes.md` (lessons), `versions/` (numbered saves), `sound_palette/` (approved sounds, used first), `references/` (reference tracks and structure maps), `template.als` (starting set, not made yet; see `versions/README.md`).
+Memory files: `taste_log.md` (ratings), `session_notes.md` (lessons), `versions/` (numbered saves), `sound_palette/` (approved sounds, used first), `references/` (reference tracks and structure maps), `template.als` (starting set on the Mac at `~/Documents/Ableton/producer/template.als`; see `versions/README.md`).

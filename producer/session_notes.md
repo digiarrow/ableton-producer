@@ -3,6 +3,11 @@
 Written at the end of every session: what worked, what didn't, what was learned. Read before starting. Newest first.
 Format: `## date · song · versions made`, then three short lists.
 
+## 2026-11-27 · setup · none
+- Worked: improvement plan sections added: section-by-section comparison (`tools/producer-agent/sections.py`, `skills/analysis.md`) and creative direction (`creative_direction.md`, wired into the checklist, hook and arrangement skills).
+- Didn't: `sections.py` is tested on synthetic audio only; first real run on the Mac still to do.
+- Learned / next: copy `sections.py` to `~/producer-agent/` on the Mac and run it once on a Mariô or Spotlight capture. Ask for a scout trend report before the next original track (none in `scout/` yet).
+
 ## 2026-11-18 · setup · none
 - Worked: producer rules, checklist, stage skills and logs set up in `producer/`.
 - Didn't: nothing built this session.
