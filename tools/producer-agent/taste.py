@@ -20,6 +20,7 @@ import argparse
 import csv
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -33,6 +34,7 @@ RATINGS = os.path.join(HOME, "Documents/Ableton/producer/taste_ratings.csv")
 PROFILE = os.path.join(HOME, "Documents/Ableton/producer/taste_profile.json")
 CACHE = os.path.join(HOME, "producer-agent/analysis/taste")
 AES_PY = os.path.join(HOME, "producer-agent/.venv-aes/bin/python")
+AES_SCRIPT = os.path.join(HOME, "producer-agent/aesthetics.py")
 SCORE = {"like": 2, "ok": 1, "dislike": 0}
 MIN_RATINGS = 30
 
@@ -68,12 +70,10 @@ def measure(path):
         pass
     if os.path.exists(AES_PY):  # optional: production quality and enjoyment scores
         try:
-            out = subprocess.run([AES_PY, "-c",
-                                  "import sys,json;from audiobox_aesthetics.infer import initialize_predictor as i;"
-                                  "print(json.dumps(i().forward([{'path':sys.argv[1]}])[0]))", path],
-                                 capture_output=True, text=True, timeout=900).stdout.strip().splitlines()[-1]
-            r = json.loads(out)
-            m.update({"aes_CE": r["CE"], "aes_PQ": r["PQ"]})
+            out = subprocess.run([AES_PY, AES_SCRIPT, path], capture_output=True, text=True,
+                                 timeout=900).stdout.strip().splitlines()[-1]
+            r = dict(re.findall(r"\b(CE|PQ) ([0-9.]+)", out))
+            m.update({"aes_CE": float(r["CE"]), "aes_PQ": float(r["PQ"])})
         except Exception:
             pass
     os.makedirs(CACHE, exist_ok=True)
@@ -129,6 +129,8 @@ if a.cmd == "add":
     print(f"saved; {n} ratings" + ("" if n >= MIN_RATINGS else f" ({MIN_RATINGS - n} more before learning)"))
 elif a.cmd == "list":
     rows = read()
+    if not rows:
+        print("no ratings yet")
     for r in rows:
         print(f"{r['date']} {r['version']}: {r['rating']} ({r['word']})")
     words = {}

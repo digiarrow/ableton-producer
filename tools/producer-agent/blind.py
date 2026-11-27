@@ -19,6 +19,7 @@ import argparse
 import json
 import os
 import random
+import re
 import subprocess
 import sys
 import time
@@ -31,6 +32,7 @@ HOME = os.path.expanduser("~")
 ROOT = os.path.join(HOME, "producer-agent/renders/blind")
 LOG = os.path.join(HOME, "producer-agent/analysis/blind_log.jsonl")
 AES_PY = os.path.join(HOME, "producer-agent/.venv-aes/bin/python")
+AES_SCRIPT = os.path.join(HOME, "producer-agent/aesthetics.py")
 SR = 44100
 
 
@@ -66,11 +68,10 @@ def aes(path):
     if not os.path.exists(AES_PY):
         return {}
     try:
-        r = subprocess.run([AES_PY, "-c", "import sys,json;from audiobox_aesthetics.infer import initialize_predictor as i;"
-                            "print(json.dumps(i().forward([{'path':sys.argv[1]}])[0]))", path],
-                           capture_output=True, text=True, timeout=900).stdout.strip().splitlines()[-1]
-        r = json.loads(r)
-        return {"CE": round(r["CE"], 2), "PQ": round(r["PQ"], 2)}
+        out = subprocess.run([AES_PY, AES_SCRIPT, path], capture_output=True, text=True,
+                             timeout=900).stdout.strip().splitlines()[-1]
+        r = dict(re.findall(r"\b(CE|PQ) ([0-9.]+)", out))
+        return {"CE": float(r["CE"]), "PQ": float(r["PQ"])}
     except Exception:
         return {}
 

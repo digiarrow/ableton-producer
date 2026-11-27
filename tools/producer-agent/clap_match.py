@@ -51,7 +51,8 @@ os.makedirs(models, exist_ok=True)
 ckpt = os.path.join(models, CKPT)
 if not os.path.exists(ckpt):
     print(f"downloading {CKPT} (about 2 GB, once)...", file=sys.stderr)
-    urllib.request.urlretrieve(URL, ckpt)
+    urllib.request.urlretrieve(URL, ckpt + ".part")  # rename only when complete
+    os.replace(ckpt + ".part", ckpt)
 
 model = laion_clap.CLAP_Module(enable_fusion=False, amodel="HTSAT-base")
 model.load_ckpt(ckpt, verbose=False)

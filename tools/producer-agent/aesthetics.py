@@ -10,7 +10,8 @@ Usage (Mac, venv with audiobox_aesthetics):
   ... aesthetics.py v12.wav --log ~/producer-agent/analysis/aesthetics.jsonl
 
 Weights download once from Hugging Face (facebook/audiobox-aesthetics, CC BY 4.0), no account.
-Same as the official CLI: audio-aes input.jsonl --batch-size 1 > output.jsonl
+The official CLI (audio-aes input.jsonl) fails on file paths on the Mac (torchaudio needs
+torchcodec + ffmpeg); use this script.
 """
 import argparse
 import json
@@ -21,13 +22,27 @@ import time
 AXES = ("CE", "CU", "PC", "PQ")
 
 
-def score(paths):
+def score(paths, piece_s=30):
+    """Load with soundfile (torchaudio on the Mac needs torchcodec + ffmpeg, which it lacks)
+    and score 30 s pieces, weighted by length: one whole-track batch runs out of GPU memory."""
+    import soundfile as sf
+    import torch
     from audiobox_aesthetics.infer import initialize_predictor
     predictor = initialize_predictor()
     out = []
-    for p in paths:  # batch size 1 keeps memory low on the Mac
-        r = predictor.forward([{"path": os.path.expanduser(p)}])[0]
-        out.append({k: round(float(r[k]), 2) for k in AXES})
+    for p in paths:
+        data, sr = sf.read(os.path.expanduser(p), dtype="float32", always_2d=True)
+        wav = torch.from_numpy(data.T.copy())
+        total, acc = 0, {k: 0.0 for k in AXES}
+        for s0 in range(0, wav.shape[1], piece_s * sr):
+            piece = wav[:, s0:s0 + piece_s * sr]
+            if piece.shape[1] < sr:  # skip a tail under 1 s
+                continue
+            r = predictor.forward([{"path": piece, "sample_rate": sr}])[0]
+            for k in AXES:
+                acc[k] += float(r[k]) * piece.shape[1]
+            total += piece.shape[1]
+        out.append({k: round(acc[k] / max(total, 1), 2) for k in AXES})
     return out
 
 
